@@ -2,20 +2,59 @@
 <html class="no-js" lang="">
 
 <head>
-  <meta charset="utf-8">
-  <title>RECETTATOR</title>
-  <meta name="description" content="">
+    <meta charset="utf-8">
+    <title>RECETTATOR</title>
+    <meta name="description" content="">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
 
 </head>
 <body>
 
-  <script src="js/main.js"></script>
+<div id='menu_nav'>
+    <a id="menu_fork"><span class='material-icons'>restaurant_menu</span></a>
+    <a id="menu_recipes_list">Liste des recettes</a>
+    <a id="menu_add_a_recipie">Ajouter une recette</a>
+    <a id="menu_my_account">Mon compte</a>
+    <a id="menu_disconnect">Deconnexion</a>
+</div>
+
+
+    <div id='toggle_btn'>
+        <span id='toggle_btn_span' class='material-icons'>menu</span>
+    </div>
+
+<div id='formulaire_div_connexion' class="center_objct">
+    <form class='formulaire_div_form'>
+        <label>CONNEXION</label>
+        <label>Pseudonyme</label> <input type='text' id='pseudo_connexion'/>
+        <label>Mot de Passe</label> <input type='password_connexion' id='password_connexion'/>
+        <input type='submit' id='send_connexion' value='Envoyer'/>
+    </form>
+</div>
+
+<div id='formulaire_div_register' class="center_objct">
+    <form class='formulaire_div_form'>
+        <label>CREATION DE COMPTE</label>
+        <label>Pseudonyme</label>
+        <input type='text' id='pseudo_register'/>
+        <label>Mot de Passe</label>
+        <input type='password' id='password_register'/>
+        <label>Confirmation du Mot de Passe</label>
+        <input type='password' id='password_confirmation_register'/>
+        <input type='submit' id='send_register' value='Envoyer'/>
+    </form>
+</div>
+
+<div id='recipes_list_div' class="center_objct">
+    <ul id='recipes_list_div_ul'>
+    </ul>
+</div>
+
+<script src="js/main.js"></script>
 </body>
 
 </html>
