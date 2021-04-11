@@ -6,7 +6,7 @@
     <title>RECETTATOR</title>
     <meta name="description" content="">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
@@ -17,7 +17,7 @@
 <div id='menu_nav'>
     <a id="menu_fork"><span class='material-icons'>restaurant_menu</span></a>
     <a id="menu_recipes_list">Liste des recettes</a>
-    <a id="menu_add_a_recipie">Ajouter une recette</a>
+    <a id="menu_add_a_recipe">Ajouter une recette</a>
     <a id="menu_my_account">Mon compte</a>
     <a id="menu_disconnect">Deconnexion</a>
 </div>
@@ -27,12 +27,12 @@
         <span id='toggle_btn_span' class='material-icons'>menu</span>
     </div>
 
-<div id='formulaire_div_connexion' class="center_objct">
+<div id='formulaire_div_login' class="center_objct">
     <form class='formulaire_div_form'>
         <label>CONNEXION</label>
-        <label>Pseudonyme</label> <input type='text' id='pseudo_connexion'/>
-        <label>Mot de Passe</label> <input type='password_connexion' id='password_connexion'/>
-        <input type='submit' id='send_connexion' value='Envoyer'/>
+        <label>Pseudonyme</label> <input type='text' id='login_username'/>
+        <label>Mot de Passe</label> <input type='password' id='login_password'/>
+        <input type='button' id='send_login' value='Envoyer'/>
     </form>
 </div>
 
@@ -40,20 +40,35 @@
     <form class='formulaire_div_form'>
         <label>CREATION DE COMPTE</label>
         <label>Pseudonyme</label>
-        <input type='text' id='pseudo_register'/>
+        <input type='text' id='register_username'/>
         <label>Mot de Passe</label>
-        <input type='password' id='password_register'/>
+        <input type='password' id='register_password'/>
         <label>Confirmation du Mot de Passe</label>
-        <input type='password' id='password_confirmation_register'/>
-        <input type='submit' id='send_register' value='Envoyer'/>
+        <input type='password' id='register_password_confirm'/>
+        <input type='button' id='send_register' value='Envoyer'/>
     </form>
 </div>
 
 <div id='recipes_list_div' class="center_objct">
+    <p>RECETTES:</p>
     <ul id='recipes_list_div_ul'>
     </ul>
 </div>
 
+<div id='add_a_recipe_div' class="center_objct">
+    <form class='formulaire_div_form'>
+        <label>AJOUTER UNE RECETTE:</label>
+        <label>Nom</label>
+        <input type='text' id='add_a_recipe_name'/>
+        <label>Difficulté:</label>
+        <input type='text' id='add_a_recipe_difficulty'/>
+        <label>Temps:</label>
+        <input type='text' id='add_a_recipe_time'/>
+        <input type='button' id='send_add_a_recipe' value='Envoyer'/>
+    </form>
+</div>
+
+<script src="js/jquery-3.6.0.js"></script>
 <script src="js/main.js"></script>
 </body>
 

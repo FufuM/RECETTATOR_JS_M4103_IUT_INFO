@@ -64,13 +64,24 @@ body {
     margin-top: 20px;
 }
 
-#formulaire_div_connexion {
+#formulaire_div_login{
     margin-top: 20vh;
 }
 
 #recipes_list_div {
     margin-top: 20vh;
+
     display: none;
+}
+
+#recipes_list_div_ul {
+
+}
+
+#add_a_recipe_div{
+    display: none;
+    margin-top: 20vh;
+
 }
 
 .formulaire_div_form {
@@ -84,8 +95,11 @@ body {
     margin-left: 30vw;
     margin-right: 30vw;
     border: solid;
+    background-color: #009688;
+
     user-select: none;
 }
+
 
 /* ==========================================================================
    Base styles: opinionated defaults

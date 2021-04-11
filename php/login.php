@@ -11,9 +11,10 @@
         $user_data = array("id" => $connected_user->getId(), "username" => $connected_user->getUsername());
         echo json_encode($user_data);
     } else {
-        if(isset($_POST['username']) && isset($_POST['password'])){
-            $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
-            $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
+
+        if(isset($_POST['login_username']) && isset($_POST['login_password'])){
+            $username = filter_var($_POST['login_username'], FILTER_SANITIZE_STRING);
+            $password = filter_var($_POST['login_password'], FILTER_SANITIZE_STRING);
 
             $users_list = $database->getUsersByUsername($username);
             foreach ($users_list as $user) {
@@ -24,7 +25,7 @@
                 }
             }
         } else {
-            echo '{}';
+            echo json_encode(false);
         }
     }
 ?>
